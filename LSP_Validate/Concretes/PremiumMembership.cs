@@ -2,16 +2,20 @@
 
 namespace LSP_Validate.Concretes
 {
-    public class PremiumMembership : Membership,IFastDelivery
+    public class PremiumMembership : Membership,IFastDelivery,IPremiumDiscount
     {
         public string GetFastDelivery()
         {
-            return "1-3 iş günü içinde teslimat";
+            return "Ertesi gün teslimat";
         }
-
         public override string PlaceOrder()
         {
             return "Sipariş oluşturuldu.";
+        }
+
+        public string PremiumDiscountRate()
+        {
+            return "Her siparişte %3 indirim.";
         }
 
         public override string ReturnOrder()
