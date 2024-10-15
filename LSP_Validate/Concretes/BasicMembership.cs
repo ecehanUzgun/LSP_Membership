@@ -1,4 +1,4 @@
-﻿using LSP_Validate.Abstracts;
+﻿using LSP_Validate.Abstract;
 
 namespace LSP_Validate.Concretes
 {

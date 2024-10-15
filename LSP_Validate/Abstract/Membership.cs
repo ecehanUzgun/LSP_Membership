@@ -1,11 +1,9 @@
-﻿namespace LSP_Validate.Abstracts
+﻿namespace LSP_Validate.Abstract
 {
     public abstract class Membership
     {
-        //Sipariş Ver
         public abstract string PlaceOrder();
 
-        //İade Et
         public abstract string ReturnOrder();
     }
 }
