@@ -16,7 +16,7 @@ namespace LSP_Validate.Concretes
         {
             return "Sipariş oluşturuldu.";
         }
-
+            
         public override string ReturnOrder()
         {
             return "İade talebi oluşturuldu.";
