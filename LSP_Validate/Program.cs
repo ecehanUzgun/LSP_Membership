@@ -7,20 +7,22 @@ namespace LSP_Validate
     {
         static void Main(string[] args)
         {
-            DiamondMembership diamondMembership = new DiamondMembership();
-            diamondMembership.AmountSpent = 100;
-            decimal resultDiamond = diamondMembership.CalculatePoint();
-
-            PremiumMembership premiumMembership = new PremiumMembership();
-            premiumMembership.AmountSpent = 100;
-            decimal resultPremium = premiumMembership.CalculatePoint();
-
             BasicMembership basicMembership = new BasicMembership();
             string basicOrder = basicMembership.PlaceOrder();
 
+            PremiumMembership premiumMembership = new PremiumMembership();
+            premiumMembership.AmountSpent = 100;
+            decimal resultPremiumPoint = premiumMembership.CalculatePoint();
+
+            DiamondMembership diamondMembership = new DiamondMembership();
+            diamondMembership.AmountSpent = 100;
+            decimal resultDiamondPoint = diamondMembership.CalculatePoint();
+
             Console.WriteLine(basicOrder);
-            Console.WriteLine(resultPremium);
-            Console.WriteLine(resultDiamond);
+
+            Console.WriteLine($"Premium üye olduğunuz için bu siparişinizden {resultPremiumPoint} puan kazandınız. Bir sonraki siparişinizde kullanabilirsiniz.");
+
+            Console.WriteLine($"Diamond üye olduğunuz için bu siparişinizden {resultDiamondPoint} puan kazandınız. Bir sonraki siparişinizde kullanabilirsiniz.");
         }
     }
 }
